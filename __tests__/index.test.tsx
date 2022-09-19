@@ -1,14 +1,12 @@
-import { render, screen } from '@testing-library/react'
-import Home from '@/pages/index'
+import Home from '@/pages/index';
 
-describe('Home', () => {
-  it('renders a heading', () => {
-    render(<Home />)
+const sum = (a: number, b: number) => {
+    return a + b;
+};
 
-    const heading = screen.getByRole('heading', {
-      name: /welcome to next\.js!/i,
-    })
-
-    expect(heading).toBeInTheDocument()
-  })
-})
+describe('Simple operations', () => {
+    test('should return 4 from 2 + 2', () => {
+        expect(sum(2, 2)).toBe(4);
+    });
+    test('should multiply', () => {});
+});
